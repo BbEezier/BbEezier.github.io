@@ -904,7 +904,7 @@ template {
 }
 
 a {
-    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/ayuda.cur), auto
+    cursor: url(/img/cursor/help.cur), auto
 }
 
 a:link {
@@ -918,7 +918,7 @@ a:hover {
 }
 
 a:active {
-    cursor: url(/img/cursor/working.ani), alias
+    cursor: url(/img/cursor/help.cur), alias
 }
 
 abbr[title] {
@@ -2733,47 +2733,41 @@ i.iconfont.hotpost {
 }
 
 .entry-content h2:after {
-    content: "Ⅰ";/*\00B6*/
+    content: "\00b6";/*\00B6*/
     position: absolute;
-    color: #ff6d6d;
+    color: #82f3ec;
     font-family: 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif;
-    padding-left: 6px;
-    font-size: 1.03em
-}
-
-.serif .entry-content h2:after {
-    content: "Ⅱ";
-    position: absolute;
-    color: #ff6d6d;
-    font-family: 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif;
-    padding-left: 6px;
+    padding-left: 5px;
     font-size: 1.13em
 }
 
-.entry-content h3:after {
-    content: "Ⅲ";
+
+.entry-content h3:before {
+    content: "▌";
     left: 0;
     position: absolute;
-    color: #ff6d6d
+    color: #82f3ec;
+    padding-left: 2px;
+    font-size: 1.13em
 }
 
-.entry-content h4:after {
-    content: "IV";
+.entry-content h4:before {
+    content: "▌";
     left: 0;
     position: absolute;
-    color: #ff6d6d
+    color: #82f3ec
 }
 
-.entry-content h5:after {
-    content: "V";
+.entry-content h5:before {
+    content: "▌";
     left: 0;
     position: absolute;
-    color: #ff6d6d
+    color: #82f3ec
 }
 
 .entry-content code {
     background: rgba(254, 250, 199, 1);
-    color: #e67474;
+    color: #14bdb4;
     word-break: break-word;
     font-family: 'Source Code Pro', monospace, Helvetica, Tahoma, Arial, STXihei, "STHeiti Light", "Microsoft YaHei", sans-serif;
     padding: 2px;
@@ -2782,7 +2776,7 @@ i.iconfont.hotpost {
 }
 
 .entry-content a {
-    color: #e67474;
+    color: #14bdb4;
     text-decoration: underline dotted rgba(0, 0, 0, .1)
 }
 
@@ -2903,7 +2897,7 @@ h1.page-title.mb- {
     background-size: contain;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-    cursor: url(/img/cursor/working.cur), auto;
+    cursor: url(/img/cursor/help.cur), auto;
     opacity: 1
 }
 
@@ -4997,7 +4991,7 @@ li.feature-2 {
 
     .top-social_v2 li {
         margin-right: 0px !important;
-        cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/ayuda.cur), auto !important;
+        cursor: url(/img/cursor/help.cur), auto !important;
     }
 
     #bgvideo {
@@ -6996,7 +6990,7 @@ i.iconfont.down {
     border: 0;
     color: #fff;
     line-height: 1;
-    cursor: url(/img/cursor/working.cur), auto;
+    cursor: url(/img/cursor/help.cur), auto;
     font-size: 14px;
     font-weight: 500;
     padding: 7px 15px;
@@ -7155,7 +7149,7 @@ input.botui-actions-text-input::-moz-focus-inner {
 }
 
 button.botui-actions-buttons-button {
-    cursor: url(/img/cursor/working.cur), auto;
+    cursor: url(/img/cursor/help.cur), auto;
     -webkit-appearance: button
 }
 
@@ -8692,7 +8686,7 @@ a.toc-link {
 .emotion-item,
 .emoji-item,
 .tieba-container span {
-    cursor: url(/img/cursor/working.cur), auto
+    cursor: url(/img/cursor/help.cur), auto
 }
 
 .alignright {
@@ -9157,7 +9151,7 @@ a.toc-link {
     padding: 2px;
     text-shadow: none;
     border-radius: 0 0 5px 5px;
-    cursor: url(/img/cursor/beam.cur), auto
+    cursor: url(), auto
 }
 
 .highlight-wrap code[data-rel]:before {
