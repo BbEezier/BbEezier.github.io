@@ -140,7 +140,7 @@ left_side_bar:
 bg_music: https://cdn.jsdelivr.net/gh/BbEezier/BbEezier.github.io@main/music/bgm1.mp3
 
 # 首页提示语
-notice: 欢迎来到我的天地，我是yLTT,祝你能度过愉快的一天
+notice: 欢迎来到我的天地，我是yLTT。祝你能度过愉快的一天！
 # 首页提示音
 myvoice: https://cdn.jsdelivr.net/gh/cungudafa/cdn@latest/music/lovingstrangers.mp3
 # 缓加载动画
@@ -177,9 +177,9 @@ donate:
 
 # 视频地址为https://cdn.jsdelivr.net/gh/honjun/hojun@1.2/Unbroken.mp4，配置如下
 movies:
-  url: https://www.acfun.cn/bangumi/
+  url: https://cdn.jsdelivr.net/gh/BbEezier/BbEezier.github.io@main/ani/
   # 多个视频用逗号隔开，随机获取。支持的格式目前已知MP4,Flv。其他的可以试下，不保证有用
-  name: aa6000991_36188_1707217
+  name: Mars_of_sense.flv
 
 aplayer:  ##媒体播放引擎，移动端会禁止自动播放
   enable: true
