@@ -85,7 +85,7 @@ function bot_ui_ini() {
                             }).then(function () {
                                 botui.message.add({
                                     delay: 1800,
-                                    content: "目前的话在努力实现个人项目y-EOS系统"
+                                    content: "目前的话在努力实现个人项目UDD(Underdog Control System)"
                                 }).then(function () {
                                     botui.message.add({
                                         delay: 1800,
