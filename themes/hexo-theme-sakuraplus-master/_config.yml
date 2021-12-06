@@ -47,7 +47,7 @@ menus:
   Miku: { path: https://game.miku.mx/ ,fa: fa fa-gift faa-tada}
   追番: {path: /bangumis/, fa: fa fa-play-circle faa-shake}
   留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
-  码农聚合: { path: http://www.cxy521.com/ ,fa: fa fa-bolt faa-shake}
+  #码农聚合: { path: http://www.cxy521.com/ ,fa: fa fa-bolt faa-shake}
   API: { path: https://api.amogu.cn/ ,fa: fa-circle-o-notch faa-shake}
   摇曳露营△ : { path: https://www.acfun.cn/bangumi/aa6000991_36188_1707217 ,fa: fa fa-caret-up faa-shake}
   关于: { path: /, fa: fa-leaf faa-wrench , submenus: { 
@@ -166,7 +166,7 @@ post_description:
 
 #--------------------------------功能页面-------------------------------------------
 donate:
-  title: 谢谢饲主了喵~
+  title: 谢谢饲主了~
   message: 我能想到最浪漫的事，就是我喝奶茶你付钱~
   paypal: #https://www.paypal.me/hojuncn
   alipay: /img/custom/donate/AliPay.jpg #大图

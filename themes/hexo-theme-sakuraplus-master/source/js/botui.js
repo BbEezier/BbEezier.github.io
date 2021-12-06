@@ -69,7 +69,7 @@ function bot_ui_ini() {
             }).then(function () {
                 botui.message.add({
                     delay: 1500,
-                    content: "不出意外是在2022年进行高考"
+                    content: "目前还是一名在校生"
                 }).then(function () {
                     botui.message.add({
                         delay: 1200,
