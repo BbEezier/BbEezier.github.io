@@ -324,7 +324,7 @@ baidusitemap:
 # widgetpack 星星评分
 # To get your ID visit https://widgetpack.com
 widgetpack:
-  enable: true #false
+  enable: false #false
   id: 23889 #<app_id>
   color: fc6423
 
