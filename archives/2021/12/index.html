@@ -7,7 +7,7 @@
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
   
-  <title itemprop="name">简单配置使用天猫精灵控制你的ESP8266 | yLTT的Blog</title>
+  <title itemprop="name">archive_a: 2021/12 | yLTT的Blog</title>
   
     <link rel="shortcut icon" href="/images/favicon.png">
   
@@ -75,9 +75,7 @@
     }
   </script>
   
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
-<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
-</head> 
+<meta name="generator" content="Hexo 5.4.0"></head> 
 
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
   <!-- Dynamic sliders -->
@@ -335,493 +333,275 @@
 
       
       <!-- body -->
-      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/sharejs.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-<div class="pattern-center-blank"></div>
-
-<div class="pattern-center single-center">
-  <!-- 有配图默认渲染第一张 -->
-  <div class="pattern-attachment-img lazyload" style="background-image: url(https://api.amogu.cn/api/acg?=3);"
-    src="/img/stripe-loader.svg" data-src="https://api.amogu.cn/api/acg?=3">
-  </div>
-  <header class="pattern-header single-header">
-    <h1 class="entry-title">简单配置使用天猫精灵控制你的ESP8266</h1>
-    <p class="entry-census">
-      
-      <span class="post-meta-item">
-        <a target="_blank" rel="noopener" href="https://www.liangzt.top">
-          <img src="http://q1.qlogo.cn/g?b=qq&nk=309002093&s=640">
-        </a>
-      </span>
-      
-      
-      <span class="post-meta-item">
-        <a target="_blank" rel="noopener" href="https://www.liangzt.top"> yLTT </a>
-      </span>
-      <span class="bull">
-        ·</span>
-      
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="fa fa-calendar"></i>
-        </span>
-        <span class="post-meta-item-text"> 2021-9-14 </span>
-      </span>
-      <span class="bull">
-        ·</span>
-      <!-- 浏览数显示 -->
-      <span class="post-meta-item" >
-        <span class="post-meta-item-icon">
-          <i class="iconfont icon-attention"></i>
-        </span>
-        <span class="post-meta-item-text">本文共<span id="busuanzi_value_page_pv"> </span>次阅读
-        </span>
-      </span>
-      <span class="bull">
-        ·</span>
-      <!-- 字数统计-->
-      <span class="post-meta-item" >
-
-        
-      </span>
-      <span class="bull">
-        ·</span>
-      <!-- 评论数显示 -->
-      <!-- <span class="post-meta-item" >
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              </span class="post-meta-item-text">
-                <span class="valine-comment-count" data-xid="/14312"> </span>
-              </span>
-          </span> -->
-    </p>
-  </header>
+      <div class="blank" style="padding-top: 75px;">
 </div>
-
 <div id="content" class="site-content">
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
-      <article id="post-1"
-        class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-        <div class="toc"></div>
-        <!--<div class="toc-entry-content">  -->
-        <!--套嵌目录使用（主要为了支援评论）-->
-        
-        <div class="entry-content">
-          <h2 id="简单配置使用天猫精灵控制你的ESP8266"><a href="#简单配置使用天猫精灵控制你的ESP8266" class="headerlink" title="简单配置使用天猫精灵控制你的ESP8266!"></a>简单配置使用<font color = #50C7D9>天猫精灵</font>控制你的<font color= #DC143C>ESP8266</font>!</h2><p>好久不见，我是yLTT。好不容易进入高中阶段的最后一年，马上就能迎接新的生活了吧！</p>
-
-        <div id="aplayer-TmnfFmkF" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-TmnfFmkF"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "義勇忍侠花吹雪",
-              author: "田澤茉純 / 嘉山未紗 / 新田ひより",
-              url: "http://music.163.com/song/media/outer/url?id=1346608352.mp3",
-              pic: "https://p1.music.126.net/ioELm7ZOPlUXYeKcnMjQQg==/109951163869439795.jpg?",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-<p>文章共分成4大块构成</p>
-<ul>
-<li><a href="#bb1">阿里生活物联网平台配置</a></li>
-<li><a href="#bb2">硬件准备</a></li>
-<li><a href="#bb3">ESP8266代码</a></li>
-<li><a href="#bb4">Arduino代码</a></li>
-</ul>
-<h4 id="阿里生活物联网平台配置"><a href="#阿里生活物联网平台配置" class="headerlink" title="阿里生活物联网平台配置"></a><div id= bb1><font color = #40E0D0>阿里生活物联网平台</font>配置</div></h4><p>打开 <strong><font color =#00008d><a target="_blank" rel="noopener" href="https://www.aligenie.com/">天猫精灵开放平台</a></font></strong> 找到 <strong>生活物联网平台</strong></p>
-<img src="1.png" data-action="zoom">
-
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/2.png" alt="2"></p>
-<p>选择 <strong>直连接入</strong></p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/3.png" alt="3"></p>
-<p>进入到阿里云生活物联网平台中的 <strong>项目管理</strong> 界面，我们新建一个项目，名字按自己需求自定义，其余选项保持默认</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/4.png" alt="4"></p>
-<p>在产品管理界面中，我们新建一个产品。所属品类最好按你实际功能选择，因为如果瞎选的话，有一些用电器在天猫精灵里面是没有对应的操控方式的，天猫精灵适配的用电器可以在等下进入产品设置界面看到（<del>大不了重新新建一个产品</del>）</p>
-<p>这里的连网方式我们要选为<strong>蜂窝</strong>网，因为如果选择wifi方式会要求你的芯片自行组网，如果你有这个需求可以在网上查询相关教程进行设置。一般个人用户做着玩的项目选蜂窝就足够了。</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/5.png" alt="5"></p>
-<p>来到 <strong>功能定义</strong> 界面，在这里你可以使用 <strong>标准功能</strong> 或者自己自定义一个功能进行数据的交换，我嫌麻烦这部分就按默认的来了，大家按需选择</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/6.png" alt="6"></p>
-<p>下一步我们来到人机交互界面，先把右上角的使用 **公版App控制产品 **勾选好，然后转到天猫精灵选项勾选开启，此时你也能看见 <font color = #00008d><strong>天猫精灵</strong></font> 支持控制的品类了，如果你的产品不在产品类别中那么请重新新建一个产品。 </p>
-<p>其余的选项，大家自行设置完后记得要保存一下，要不然他会用 <font color = #FFA500>**! **</font>来警示你，强迫症看着还是很不爽的</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/7.png" alt="7"></p>
-<p>转到 <strong>设备调试</strong> 界面，我们随便选一个芯片</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/8.png" alt="8"></p>
-<p>然后我们 <strong>新增测试设备</strong> ,DeviceName你自己自定义，新建过后他会有三个数据（ProductKey、DeviceName、DeviceSecret）给你，最好拿txt文件保存一下方便等一下操作</p>
-<p>至此，<strong>生活物联网平台</strong> 的设置暂时告一段落</p>
-<h4 id="硬件准备"><a href="#硬件准备" class="headerlink" title="硬件准备"></a><font color = #ff0070><div id= bb2>硬件准备</div></font></h4><p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/10.jpg" alt="10"></p>
-<p>首先，你得先有一个天猫精灵是吧~</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/11.jpg" alt="11"></p>
-<p>这是我的nodemcu开发板</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/12.jpg" alt="12"></p>
-<p>这是我的Arduino UNO和一个测试用的RGB模块</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/9.png" alt="9"></p>
-<p>简单的接线图</p>
-<h4 id="ESP8266代码"><a href="#ESP8266代码" class="headerlink" title="ESP8266代码"></a><font color=#52ff00><div id= bb3>ESP8266代码</div></font></h4><p>首先要确保你的Arduino IDE有 <a target="_blank" rel="noopener" href="https://github.com/yu-tou/arduino-aliyun-iot-sdk">AliyunIoTSDK</a> 这个库，按照他的说明把依赖项安装好。</p>
-<p>感谢芋头大佬，让ESP8266连上阿里云变得更加方便迅速</p>
-<p><a target="_blank" rel="noopener" href="https://www.arduino.cn/thread-76029-1-1.html">ESP8266离线包</a></p>
-<pre><code class="c">// 引入 wifi 模块，并实例化，不同的芯片这里的依赖可能不同
-#include &lt;ESP8266WiFi.h&gt;
-static WiFiClient espClient;
-// 引入阿里云 IoT SDK
-#include &lt;AliyunIoTSDK.h&gt;
-// 设置产品和设备的信息，从阿里云设备信息里查看
-#define PRODUCT_KEY &quot;a1aOFU668aC&quot;                        //产品ID
-#define DEVICE_NAME &quot;FKRGB&quot;                //设备名
-#define DEVICE_SECRET &quot;************&quot; //设备key
-#define REGION_ID &quot;cn-shanghai&quot;
-// 设置 wifi 信息
-#define WIFI_SSID &quot;ESP8266&quot;   
-#define WIFI_PASSWD &quot;IOT666666&quot;
-void setup()
-&#123;
-    Serial.begin(115200);
-    // 初始化 wifi
-    wifiInit(WIFI_SSID, WIFI_PASSWD);
-    // 初始化 iot，需传入 wifi 的 client，和设备产品信息
-    AliyunIoTSDK::begin(espClient, PRODUCT_KEY, DEVICE_NAME, DEVICE_SECRET, REGION_ID); 
-&#125;
-
-void loop()
-&#123;
-     AliyunIoTSDK::loop();
-&#125;
-
-// 初始化 wifi 连接
-void wifiInit(const char *ssid, const char *passphrase)
-&#123;
-    WiFi.mode(WIFI_STA);
-    WiFi.begin(ssid, passphrase);
-    while (WiFi.status() != WL_CONNECTED)
-    &#123;
-        delay(1000);
-        Serial.println(&quot;WiFi not Connect&quot;);
-    &#125;
-    Serial.println(&quot;Connected to AP&quot;);
-&#125;
-</code></pre>
-<p>请用刚才你保存好的3个数据，替换上面的定义，还有wifi的设置也请你自行替换</p>
-<p>烧录过后，应该就能看到你的设备已经在线了</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/13.png" alt="13"></p>
-<p>这时我们先暂时回到 <strong>生活物联网平台</strong> 中的 <strong>批量投产</strong> 页面</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/14.png" alt="14"></p>
-<p>点开配网 + App下载二维码 把你的Device Name填好生成二维码</p>
-<p>确定好你的Esp8266已经连接好阿里云后，在手机上搜索应用商店下载 <strong>云智能</strong> APP</p>
-<p>点开右上角的扫码功能，扫这个二维码</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/17.jpg" alt="17"></p>
-<p>这是我配网成功的界面，我们现在打开Arduino IDE的串口功能，查看我们在App下达的指令 <strong>ESP8266</strong> 能否收到</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/18.png" alt="18"></p>
-<p>欧耶！成功了！</p>
-<p>这时我们可以对代码进行进一步的修改</p>
-<pre><code class="c">// 引入 wifi 模块，并实例化，不同的芯片这里的依赖可能不同
-#include &lt;ESP8266WiFi.h&gt;
-static WiFiClient espClient;
-// 引入阿里云 IoT SDK
-#include &lt;AliyunIoTSDK.h&gt;
-#include&lt;SoftwareSerial.h&gt;
-SoftwareSerial mySerial(4,5); //D2，D1脚分别为rx，tx
-// 设置产品和设备的信息，从阿里云设备信息里查看
-#define PRODUCT_KEY &quot;a1aOFU668aC&quot;                        //产品ID
-#define DEVICE_NAME &quot;FKRGB&quot;                //设备名
-#define DEVICE_SECRET &quot;***************&quot; //设备key
-#define REGION_ID &quot;cn-shanghai&quot;
-// 设置 wifi 信息
-#define WIFI_SSID &quot;ESP8266&quot;   
-#define WIFI_PASSWD &quot;IOT666666&quot;
-int Red,Blue,Green;
-String RGBvalue;
-void setup()
-&#123;
-    // set the digital pin as output:
-    mySerial.begin(9600);
-    Serial.begin(115200);
-    // 初始化 wifi
-    wifiInit(WIFI_SSID, WIFI_PASSWD);
-    // 初始化 iot，需传入 wifi 的 client，和设备产品信息
-    AliyunIoTSDK::begin(espClient, PRODUCT_KEY, DEVICE_NAME, DEVICE_SECRET, REGION_ID);
-    // 绑定一个设备属性回调，当远程修改此属性，会触发 SetRGBColorCallback
-    // RGBColor 是在设备产品中定义的功能标识符
-    AliyunIoTSDK::bindData(&quot;RGBColor&quot;,SetRGBColorCallback);
-&#125;
-
-void loop()
-&#123;
-     AliyunIoTSDK::loop();
-&#125;
-
-// 初始化 wifi 连接
-void wifiInit(const char *ssid, const char *passphrase)
-&#123;
-    WiFi.mode(WIFI_STA);
-    WiFi.begin(ssid, passphrase);
-    while (WiFi.status() != WL_CONNECTED)
-    &#123;
-        delay(1000);
-        Serial.println(&quot;WiFi not Connect&quot;);
-    &#125;
-    Serial.println(&quot;Connected to AP&quot;);
-&#125;
-
-// RGBColor状态修改的回调函数
-void SetRGBColorCallback(JsonVariant p)
-&#123;
-    Red = p[&quot;RGBColor&quot;][&quot;Red&quot;];
-    Green = p[&quot;RGBColor&quot;][&quot;Green&quot;];
-    Blue = p[&quot;RGBColor&quot;][&quot;Blue&quot;];
-    RGBvalue += Red;
-    RGBvalue += &#39;,&#39;;
-    RGBvalue += Green;
-    RGBvalue += &#39;,&#39;;
-    RGBvalue += Blue;
-    mySerial.print(RGBvalue);
-    Serial.print(RGBvalue);
-    RGBvalue = &quot;&quot;;
-&#125;
-</code></pre>
-<p>看注释就知道函数大概的用途，如果对上面函数有不了解的建议去看 AliyunIotSdk 的技术文档</p>
-<p>然后我们回到 云智能App 来到这个页面点开 <strong>更多服务</strong></p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/15.png" alt="15"></p>
-<p>找到天猫精灵，绑定你自己天猫精灵的账号</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/16.jpg" alt="16"></p>
-<p>绑定成功后，打开天猫精灵看看</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/19.jpg" alt="19"></p>
-<p>欧耶！连接上天猫精灵啦！</p>
-<p>用天猫精灵控制esp8266就很简单了，我们直接呢，在场景这个选项当中，新建一个自定义智能场景即可</p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/20.jpg" alt="20"></p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/21.jpg" alt="21"></p>
-<p><img src="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/22.jpg" alt="22"></p>
-<p>然后你只需要对天猫精灵喊命令，就会按你的设置执行功能了</p>
-<h4 id="Arduino代码"><a href="#Arduino代码" class="headerlink" title="Arduino代码"></a><font color =#39c5bb><div id= bb4>Arduino代码</div></font></h4><pre><code class="c">#include&lt;SoftwareSerial.h&gt;
-SoftwareSerial mySerial(2,3); //2，3脚分别为rx，tx
-#define Rpin 9
-#define Gpin 10
-#define Bpin 11
-String ReadData;
-int RGBvalue[]=&#123;0,0,0&#125;;
-int tod;
-int i = 0;
-void setup()
-&#123; 
-  Serial.begin(115200);
-  mySerial.begin(9600);
-  pinMode(Rpin,OUTPUT);
-  pinMode(Gpin,OUTPUT);
-  pinMode(Bpin,OUTPUT);
-&#125;
-void loop()
-&#123;
-   SerialListen();
-   goRGBwithArray(RGBvalue);
-   i = 0;
-   ReadData = &quot;&quot;;
-&#125;
-void SerialListen()&#123;
-   while(mySerial.available())
-   &#123;
-     ReadData += char(mySerial.read());
-     delay(2);
-   &#125;
-   Serial.print(ReadData);
-   do&#123;
-      tod = ReadData.indexOf(&#39;,&#39;);//找到字符串中逗号出现的位置
-          if(tod != -1)
-          &#123;
-             String str;//我们先创建一个String
-             str = ReadData.substring(0,tod);//用来保存逗号前面的数据
-             RGBvalue[i] = str.toInt();//将上面的保存好的String数据转换成Int类型保存到RGBvalue中
-             ReadData = ReadData.substring(tod + 1,ReadData.length());
-             i++;//进入下一次循环
-           //  Serial.println(message);
-          &#125;
-          else&#123;
-            if(ReadData.length()&gt;0)&#123;
-               RGBvalue[2] = ReadData.toInt();
-            &#125;
-          &#125;
-     &#125;while(tod&gt;=0);
-  &#125;
-void goRGB(int Rval,int Gval,int Bval)&#123;
-  analogWrite(Rpin,Rval);
-  analogWrite(Gpin,Gval);//因为我手头这个RGB灯带是共阴的，所以不需要用255去减，如果是共阴的RGB灯带要用255减去这个值
-  analogWrite(Bpin,Bval);
-  &#125;
-void goRGBwithArray(int RGBval[])&#123;
-  analogWrite(Rpin,RGBval[0]);
-  analogWrite(Gpin,RGBval[1]);
-  analogWrite(Bpin,RGBval[2]);
-  &#125;
-void bln(int pin,int val)&#123; //简单呼吸灯函数
-  for(int i=0;i&lt;val ; i++)&#123;
-    analogWrite(pin,i);
-    delay(2);
-    &#125;
-  delay(1000);
-  for(int i=255;i&gt;0 ; i--)&#123;
-    analogWrite(pin,i);
-    delay(2);
-    &#125;
-  &#125;
-</code></pre>
-<p>这里的代码可以不用照抄，大家可以按自己需求写自己的下位机代码，我这里主要是提供一个思路</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>比较容易上手的实用小项目，适合喜欢动手的小伙伴来体验物联网这一概念！</p>
-<h4 id="最后-Excelsior"><a href="#最后-Excelsior" class="headerlink" title="最后,Excelsior!"></a>最后,<font color=#39c5bb><strong>Excelsior</strong>!</font></h4>
-        </div>
-
-
-        <!-- 评分 -->
-        <div class="single-reward">
-          
-        </div>
-        <!-- 自定义署名方式 -->
-        <footer class="post-footer">
-          <div class="post-lincenses" style="color: #66e0ff;">
-            欢迎转载，转载时请注明来源哦！
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" style="color: #66e0ff;" target="_blank"
-              rel="nofollow">
-              <i class="fa fa-creative-commons" aria-hidden="true"></i>ncsa4.0</a>
-          </div>
-          
-          <div class="post-tags" style="color: #919aa3">
-            <span><i class="fa fa-tags"></i>
+  <div id="main">
+    <header class="page-header">
+      <h1 class="cat-title">
+        归档</h1>
+      <span class="cat-des">
+        <p>
+          Archives</p>
+      </span>
+      <br>
+      <span class="post-meta-item-icon">
+        <i class="iconfont icon-attention"></i>
+      </span>
+      <span class="post-meta-item-text"><span id="busuanzi_value_page_pv"> </span>
+      </span>
+    </header>
+    <div id="main-part">
+      <article class="art">
+        <div class="art-main">
+          <div class="art-content">
+            <div id="archives">
+              <p style="text-align:right;">
+                [<span id="al_expand_collapse" style="cursor: s-resize;">
+                  全部展开/收缩</span>
+                ]</p>
               
-              <a href="/tags/%E7%89%A9%E8%81%94%E7%BD%91/" style="color: #919aa3;">物联网<em>·</em></a>
               
-            </span>
-            <span>
-              <i class="iconfont icon-file"></i>
               
-              <a href="/categories/%E6%8A%80%E6%9C%AF/" style="color: #919aa3;">技术</a>
               
-            </span>
-          </div>
-          
-          <div class="post-share" >
-            <div class="social-share sharehidden share-component"></div>
-            <i class="iconfont show-share icon-forward"></i>
-          </div>
-        </footer><!-- .entry-footer -->
-        <!-- <div class="tag-cloud">
-          <div class="tag-cloud-title">
-          </div>
-          <div class="tag-cloud-tags">
-            <a href="/tags/Hexo/" style="font-size: 10px; color: #f06966">Hexo</a> <a href="/tags/web/" style="font-size: 15px; color: #9592a7">web</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%8A%80%E6%9C%AF/" style="font-size: 10px; color: #f06966">博客技术</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/" style="font-size: 15px; color: #9592a7">博客相关</a> <a href="/tags/%E6%B4%8B%E8%B4%A7/" style="font-size: 10px; color: #f06966">洋货</a> <a href="/tags/%E7%89%A9%E8%81%94%E7%BD%91/" style="font-size: 20px; color: #39bae8">物联网</a>
-          </div>
-        </div> -->
-      </article>
-      <!-- #post-## -->
-      <div class="toc" style="background: none;"></div>
-      <section class="post-squares nextprev">
-        
-        
-        <div class="post-nepre half previous">
-          
-            <a href="/2021/11/17/%E6%9C%AC%E7%AB%99%E4%B8%BB%E9%A2%98%E5%B7%B2%E6%9B%B4%E6%8D%A2%E4%B8%BASakura/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="/img/stripe-loader.svg" data-src="https://api.amogu.cn/api/acg?=4"
-                  style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)"
-                  src="https://api.amogu.cn/api/acg?=4">
-              </div>
-              <span class="label">Previous Post</span>
-              <div class="info">
-                <h3>本站主题已更换为Sakura</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-          
-          
-          
-          <div class="post-nepre half next">
-            
-              <a href="/2021/07/30/Hexo-Coding-Github%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B-2021%E7%89%88/" rel="next">
-                <div class="background">
-                  <img class="lazyload" src="/img/stripe-loader.svg" data-src="https://api.amogu.cn/api/acg?=2"
-                    style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
-                    onerror="imgError(this,3)" src="https://api.amogu.cn/api/acg?=2">
-                </div>
-                <span class="label">Next Post</span>
-                <div class="info">
-                  <h3>Hexo + Coding/Github静态博客部署教程 2021版</h3>
-                  <hr>
-                </div>
-              </a>
+              
+              
+              <h3 class="al_year">2021年</h3>
+              
+              
+              
+              <ul class="al_mon_list">
+                <li class="al_li">
+                  <span class="al_mon" style="cursor: s-resize;">
+                    12月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                  <ul class="al_post_list" style="">
+                    
+                    <li>
+                      <a href="/2021/12/09/Alexa-%E5%BF%AB%E9%80%9F%E6%8E%A5%E5%85%A5-Esp8266-SinricPro/">
+                        <span style="color:#39c5bb;">
+                          09日10:37:09</span>
+                        Alexa 快速接入 Esp8266 SinricPro
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </li>
+              </ul>
+              
+              
+              
+              
+              
+              
+              
+              <ul class="al_mon_list">
+                <li class="al_li">
+                  <span class="al_mon" style="cursor: s-resize;">
+                    11月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                  <ul class="al_post_list" style="">
+                    
+                    <li>
+                      <a href="/2021/11/30/Python-Mongodb-Esp8266-%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%AE%80%E6%98%93%E6%B8%A9%E6%B9%BF%E5%BA%A6%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA/">
+                        <span style="color:#39c5bb;">
+                          30日20:22:44</span>
+                        Python+Mongodb+Esp8266+小程序的简易温湿度数据展示
+                      </a>
+                    </li>
+                    
+              
+              
+              
+              
+              
+                    <li>
+                      <a href="/2021/11/17/%E6%9C%AC%E7%AB%99%E4%B8%BB%E9%A2%98%E5%B7%B2%E6%9B%B4%E6%8D%A2%E4%B8%BASakura/">
+                        <span style="color:#39c5bb;">
+                          17日19:27:54</span>
+                        本站主题已更换为Sakura
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </li>
+              </ul>
+              
+              
+              
+              
+              
+              
+              
+              <ul class="al_mon_list">
+                <li class="al_li">
+                  <span class="al_mon" style="cursor: s-resize;">
+                    09月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                  <ul class="al_post_list" style="">
+                    
+                    <li>
+                      <a href="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/">
+                        <span style="color:#39c5bb;">
+                          14日08:30:20</span>
+                        简单配置使用天猫精灵控制你的ESP8266
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </li>
+              </ul>
+              
+              
+              
+              
+              
+              
+              
+              <ul class="al_mon_list">
+                <li class="al_li">
+                  <span class="al_mon" style="cursor: s-resize;">
+                    07月(<span id="post-num">
+                      3</span>
+                    篇文章)</span>
+                  <ul class="al_post_list" style="">
+                    
+                    <li>
+                      <a href="/2021/07/30/Hexo-Coding-Github%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B-2021%E7%89%88/">
+                        <span style="color:#39c5bb;">
+                          30日10:35:39</span>
+                        Hexo + Coding/Github静态博客部署教程 2021版
+                      </a>
+                    </li>
+                    
+              
+              
+              
+              
+              
+                    <li>
+                      <a href="/2021/07/29/%E5%85%B3%E4%BA%8EGal%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97-0/">
+                        <span style="color:#39c5bb;">
+                          29日12:47:54</span>
+                        关于Gal主题的一些使用心得
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </li>
+              </ul>
+              
+              
             </div>
-            
-      </section>
-      <!-- 加密文章隐藏评论 -->
-      <section class="comment" >
-        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<div id="gitalk-container" class="comment"></div> 
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script src="/js/md5.min.js"></script>
-<script type="text/javascript">
-	var gitalk = new Gitalk({
-  	clientID: '6c7a21ccc38aac877ba4',
-  	clientSecret: 'c05dc3231f6525f17a1b984be8ce6798de3913a6',
-  	repo: 'BbEezier.github.io',
-  	owner: 'BbEezier',
-	admin: ['BbEezier'],
-	distractionFreeMode: 'true',
-    id: md5(location.pathname)
-})
-gitalk.render('gitalk-container') 
-</script>
+            <div id="calendar">
+              
+                <div class="container archive-calendar">
+    <div class="card">
+        <div id="post-calendar" class="card-content"></div>
+    </div>
+</div>
+<style type="text/css">
+    #post-calendar {
+        width: 100%;
+        height: 225px;
+        margin-top: 20px;
+        border-radius: 12px;
+        background-color: rgb(255, 255, 255,0.5);
+    }
+</style>
 
-      </section>
-      <!-- 加密文章隐藏作者信息 -->
-      
-      <section class="author-profile" >
-        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-          <a target="_blank" rel="noopener" href="https://www.liangzt.top" class="profile gravatar"><img src="http://q1.qlogo.cn/g?b=qq&nk=309002093&s=640" itemprop="image"
-              alt="yLTT" height="70" width="70"></a>
-          <div class="meta">
-            <span class="title">Author</span>
-            <h3 itemprop="name">
-              <a target="_blank" href="https://www.liangzt.top" itemprop="url" rel="author noopener">yLTT</a>
-            </h3>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/js/echarts.min.js"></script>
+<script type="text/javascript">
+    let myChart = echarts.init(document.getElementById('post-calendar'));
+
+    
+
+    let option = {
+        title: {
+            top: 0,
+            text: '文章日历',
+            left: 'center',
+            textStyle: {
+                color: '#3C4858'
+            }
+        },
+        tooltip: {
+            padding: 10,
+            backgroundColor: '#555',
+            borderColor: '#777',
+            borderWidth: 1,
+            formatter: function (obj) {
+                var value = obj.value;
+                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
+            }
+        },
+        visualMap: {
+            show: true,
+            showLabel: true,
+            categories: [0, 1, 2, 3, 4],
+            calculable: true,
+            inRange: {
+                symbol: 'rect',
+                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
+            },
+            itemWidth: 12,
+            itemHeight: 12,
+            orient: 'horizontal',
+            left: 'center',
+            bottom: 0
+        },
+        calendar: [{
+            left: 'center',
+            range: ["2020-12-09", "2021-12-09"],
+            cellSize: [13, 13],
+            splitLine: {
+                show: false
+            },
+            itemStyle: {
+                width: '1.88679%',
+                height: '15px',
+                color: '#EEEEEE',
+                borderColor: '#FFF',
+                borderWidth: 2
+            },
+            yearLabel: {
+                show: false
+            },
+            monthLabel: {
+                nameMap: 'cn',
+                fontWeight: 'lighter',
+                fontSize: 12
+            },
+            dayLabel: {
+                show: true,
+                formatter: '{start}  1st',
+                fontWeight: 'lighter',
+                nameMap: ['日',' ','二',' ','四',' ','六',],
+                fontSize: 12
+            }
+        }],
+        series: [{
+            type: 'heatmap',
+            coordinateSystem: 'calendar',
+            calendarIndex: 0,
+            data: [["2020-12-09", 0], ["2020-12-10", 0], ["2020-12-11", 0], ["2020-12-12", 0], ["2020-12-13", 0], ["2020-12-14", 0], ["2020-12-15", 0], ["2020-12-16", 0], ["2020-12-17", 0], ["2020-12-18", 0], ["2020-12-19", 0], ["2020-12-20", 0], ["2020-12-21", 0], ["2020-12-22", 0], ["2020-12-23", 0], ["2020-12-24", 0], ["2020-12-25", 0], ["2020-12-26", 0], ["2020-12-27", 0], ["2020-12-28", 0], ["2020-12-29", 0], ["2020-12-30", 0], ["2020-12-31", 0], ["2021-01-01", 0], ["2021-01-02", 0], ["2021-01-03", 0], ["2021-01-04", 0], ["2021-01-05", 0], ["2021-01-06", 0], ["2021-01-07", 0], ["2021-01-08", 0], ["2021-01-09", 0], ["2021-01-10", 0], ["2021-01-11", 0], ["2021-01-12", 0], ["2021-01-13", 0], ["2021-01-14", 0], ["2021-01-15", 0], ["2021-01-16", 0], ["2021-01-17", 0], ["2021-01-18", 0], ["2021-01-19", 0], ["2021-01-20", 0], ["2021-01-21", 0], ["2021-01-22", 0], ["2021-01-23", 0], ["2021-01-24", 0], ["2021-01-25", 0], ["2021-01-26", 0], ["2021-01-27", 0], ["2021-01-28", 0], ["2021-01-29", 0], ["2021-01-30", 0], ["2021-01-31", 0], ["2021-02-01", 0], ["2021-02-02", 0], ["2021-02-03", 0], ["2021-02-04", 0], ["2021-02-05", 0], ["2021-02-06", 0], ["2021-02-07", 0], ["2021-02-08", 0], ["2021-02-09", 0], ["2021-02-10", 0], ["2021-02-11", 0], ["2021-02-12", 0], ["2021-02-13", 0], ["2021-02-14", 0], ["2021-02-15", 0], ["2021-02-16", 0], ["2021-02-17", 0], ["2021-02-18", 0], ["2021-02-19", 0], ["2021-02-20", 0], ["2021-02-21", 0], ["2021-02-22", 0], ["2021-02-23", 0], ["2021-02-24", 0], ["2021-02-25", 0], ["2021-02-26", 0], ["2021-02-27", 0], ["2021-02-28", 0], ["2021-03-01", 0], ["2021-03-02", 0], ["2021-03-03", 0], ["2021-03-04", 0], ["2021-03-05", 0], ["2021-03-06", 0], ["2021-03-07", 0], ["2021-03-08", 0], ["2021-03-09", 0], ["2021-03-10", 0], ["2021-03-11", 0], ["2021-03-12", 0], ["2021-03-13", 0], ["2021-03-14", 0], ["2021-03-15", 0], ["2021-03-16", 0], ["2021-03-17", 0], ["2021-03-18", 0], ["2021-03-19", 0], ["2021-03-20", 0], ["2021-03-21", 0], ["2021-03-22", 0], ["2021-03-23", 0], ["2021-03-24", 0], ["2021-03-25", 0], ["2021-03-26", 0], ["2021-03-27", 0], ["2021-03-28", 0], ["2021-03-29", 0], ["2021-03-30", 0], ["2021-03-31", 0], ["2021-04-01", 0], ["2021-04-02", 0], ["2021-04-03", 0], ["2021-04-04", 0], ["2021-04-05", 0], ["2021-04-06", 0], ["2021-04-07", 0], ["2021-04-08", 0], ["2021-04-09", 0], ["2021-04-10", 0], ["2021-04-11", 0], ["2021-04-12", 0], ["2021-04-13", 0], ["2021-04-14", 0], ["2021-04-15", 0], ["2021-04-16", 0], ["2021-04-17", 0], ["2021-04-18", 0], ["2021-04-19", 0], ["2021-04-20", 0], ["2021-04-21", 0], ["2021-04-22", 0], ["2021-04-23", 0], ["2021-04-24", 0], ["2021-04-25", 0], ["2021-04-26", 0], ["2021-04-27", 0], ["2021-04-28", 0], ["2021-04-29", 0], ["2021-04-30", 0], ["2021-05-01", 0], ["2021-05-02", 0], ["2021-05-03", 0], ["2021-05-04", 0], ["2021-05-05", 0], ["2021-05-06", 0], ["2021-05-07", 0], ["2021-05-08", 0], ["2021-05-09", 0], ["2021-05-10", 0], ["2021-05-11", 0], ["2021-05-12", 0], ["2021-05-13", 0], ["2021-05-14", 0], ["2021-05-15", 0], ["2021-05-16", 0], ["2021-05-17", 0], ["2021-05-18", 0], ["2021-05-19", 0], ["2021-05-20", 0], ["2021-05-21", 0], ["2021-05-22", 0], ["2021-05-23", 0], ["2021-05-24", 0], ["2021-05-25", 0], ["2021-05-26", 0], ["2021-05-27", 0], ["2021-05-28", 0], ["2021-05-29", 0], ["2021-05-30", 0], ["2021-05-31", 0], ["2021-06-01", 0], ["2021-06-02", 0], ["2021-06-03", 0], ["2021-06-04", 0], ["2021-06-05", 0], ["2021-06-06", 0], ["2021-06-07", 0], ["2021-06-08", 0], ["2021-06-09", 0], ["2021-06-10", 0], ["2021-06-11", 0], ["2021-06-12", 0], ["2021-06-13", 0], ["2021-06-14", 0], ["2021-06-15", 0], ["2021-06-16", 0], ["2021-06-17", 0], ["2021-06-18", 0], ["2021-06-19", 0], ["2021-06-20", 0], ["2021-06-21", 0], ["2021-06-22", 0], ["2021-06-23", 0], ["2021-06-24", 0], ["2021-06-25", 0], ["2021-06-26", 0], ["2021-06-27", 0], ["2021-06-28", 0], ["2021-06-29", 0], ["2021-06-30", 0], ["2021-07-01", 0], ["2021-07-02", 0], ["2021-07-03", 0], ["2021-07-04", 0], ["2021-07-05", 0], ["2021-07-06", 0], ["2021-07-07", 0], ["2021-07-08", 0], ["2021-07-09", 0], ["2021-07-10", 0], ["2021-07-11", 0], ["2021-07-12", 0], ["2021-07-13", 0], ["2021-07-14", 0], ["2021-07-15", 0], ["2021-07-16", 0], ["2021-07-17", 0], ["2021-07-18", 0], ["2021-07-19", 0], ["2021-07-20", 0], ["2021-07-21", 0], ["2021-07-22", 0], ["2021-07-23", 0], ["2021-07-24", 0], ["2021-07-25", 0], ["2021-07-26", 0], ["2021-07-27", 0], ["2021-07-28", 0], ["2021-07-29", 1], ["2021-07-30", 1], ["2021-07-31", 0], ["2021-08-01", 0], ["2021-08-02", 0], ["2021-08-03", 0], ["2021-08-04", 0], ["2021-08-05", 0], ["2021-08-06", 0], ["2021-08-07", 0], ["2021-08-08", 0], ["2021-08-09", 0], ["2021-08-10", 0], ["2021-08-11", 0], ["2021-08-12", 0], ["2021-08-13", 0], ["2021-08-14", 0], ["2021-08-15", 0], ["2021-08-16", 0], ["2021-08-17", 0], ["2021-08-18", 0], ["2021-08-19", 0], ["2021-08-20", 0], ["2021-08-21", 0], ["2021-08-22", 0], ["2021-08-23", 0], ["2021-08-24", 0], ["2021-08-25", 0], ["2021-08-26", 0], ["2021-08-27", 0], ["2021-08-28", 0], ["2021-08-29", 0], ["2021-08-30", 0], ["2021-08-31", 0], ["2021-09-01", 0], ["2021-09-02", 0], ["2021-09-03", 0], ["2021-09-04", 0], ["2021-09-05", 0], ["2021-09-06", 0], ["2021-09-07", 0], ["2021-09-08", 0], ["2021-09-09", 0], ["2021-09-10", 0], ["2021-09-11", 0], ["2021-09-12", 0], ["2021-09-13", 0], ["2021-09-14", 1], ["2021-09-15", 0], ["2021-09-16", 0], ["2021-09-17", 0], ["2021-09-18", 0], ["2021-09-19", 0], ["2021-09-20", 0], ["2021-09-21", 0], ["2021-09-22", 0], ["2021-09-23", 0], ["2021-09-24", 0], ["2021-09-25", 0], ["2021-09-26", 0], ["2021-09-27", 0], ["2021-09-28", 0], ["2021-09-29", 0], ["2021-09-30", 0], ["2021-10-01", 0], ["2021-10-02", 0], ["2021-10-03", 0], ["2021-10-04", 0], ["2021-10-05", 0], ["2021-10-06", 0], ["2021-10-07", 0], ["2021-10-08", 0], ["2021-10-09", 0], ["2021-10-10", 0], ["2021-10-11", 0], ["2021-10-12", 0], ["2021-10-13", 0], ["2021-10-14", 0], ["2021-10-15", 0], ["2021-10-16", 0], ["2021-10-17", 0], ["2021-10-18", 0], ["2021-10-19", 0], ["2021-10-20", 0], ["2021-10-21", 0], ["2021-10-22", 0], ["2021-10-23", 0], ["2021-10-24", 0], ["2021-10-25", 0], ["2021-10-26", 0], ["2021-10-27", 0], ["2021-10-28", 0], ["2021-10-29", 0], ["2021-10-30", 0], ["2021-10-31", 0], ["2021-11-01", 0], ["2021-11-02", 0], ["2021-11-03", 0], ["2021-11-04", 0], ["2021-11-05", 0], ["2021-11-06", 0], ["2021-11-07", 0], ["2021-11-08", 0], ["2021-11-09", 0], ["2021-11-10", 0], ["2021-11-11", 0], ["2021-11-12", 0], ["2021-11-13", 0], ["2021-11-14", 0], ["2021-11-15", 0], ["2021-11-16", 0], ["2021-11-17", 1], ["2021-11-18", 0], ["2021-11-19", 0], ["2021-11-20", 0], ["2021-11-21", 0], ["2021-11-22", 0], ["2021-11-23", 0], ["2021-11-24", 0], ["2021-11-25", 0], ["2021-11-26", 0], ["2021-11-27", 0], ["2021-11-28", 0], ["2021-11-29", 0], ["2021-11-30", 1], ["2021-12-01", 0], ["2021-12-02", 0], ["2021-12-03", 0], ["2021-12-04", 0], ["2021-12-05", 0], ["2021-12-06", 0], ["2021-12-07", 0], ["2021-12-08", 0], ["2021-12-09", 1]]
+        }]
+
+    };
+
+    myChart.setOption(option);
+</script>
+              
+            </div>
           </div>
         </div>
-        <hr>
-        <p><i class="iconfont icon-write"></i>与君共勉!</p>
-      </section>
-      
-    </main><!-- #main -->
-  </div><!-- #primary -->
+      </article>
+    </div>
+  </div>
 </div>
-
-
-<!--评论配置-->
-
-
-
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<div id="gitalk-container" class="comment"></div> 
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script src="/js/md5.min.js"></script>
-<script type="text/javascript">
-	var gitalk = new Gitalk({
-  	clientID: '6c7a21ccc38aac877ba4',
-  	clientSecret: 'c05dc3231f6525f17a1b984be8ce6798de3913a6',
-  	repo: 'BbEezier.github.io',
-  	owner: 'BbEezier',
-	admin: ['BbEezier'],
-	distractionFreeMode: 'true',
-    id: md5(location.pathname)
-})
-gitalk.render('gitalk-container') 
-</script>
-
-
       <!-- body.end -->
     </div>
     <!-- search -->    
