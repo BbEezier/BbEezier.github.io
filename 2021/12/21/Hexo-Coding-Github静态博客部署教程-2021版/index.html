@@ -7,7 +7,7 @@
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
   
-  <title itemprop="name">Tag: 物联网 | yLTT的Blog</title>
+  <title itemprop="name">yLTT的Blog</title>
   
     <link rel="shortcut icon" href="/images/favicon.png">
   
@@ -333,157 +333,298 @@
 
       
       <!-- body -->
-      
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="/img/stripe-loader.svg" data-src="物联网.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
-  </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">物联网</h1>
-    <br>
-    <span class="post-meta-item-icon">
-      <i class="iconfont icon-attention"></i>
-    </span>
-    <span class="post-meta-item-text"><span id="busuanzi_value_page_pv"> </span>
-    </span>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      
-    <!-- 置顶文章 -->
-    
-      
-    
-      
-    
-      
-    
-    <!-- 首页默认取最最新文章集 -->
-    
-      <!-- 其余文章 -->
-      
-        <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2021/12/09/Alexa-%E5%BF%AB%E9%80%9F%E6%8E%A5%E5%85%A5-Esp8266-SinricPro/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
+      <article id="post-1"
+        class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content">  -->
+        <!--套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Hexo + Coding/Github静态博客部署教程 2021版</title>
+</head>
+<body>
+<h2 id='hexo--codinggithub-静态博客部署教程'>Hexo + <font color = #50C7D9>Coding</font>/<font color=pink>Github</font> 静态博客部署教程</h2>
+<p>本篇文章内容由本人实践后亲测有效，遇到奇奇怪怪的BUG建议熟练使用<font color =#E90602><a target="_blank" rel="noopener" href='https://www.baidu.com/'>百度</a></font>等搜索引擎，如若无果在尝试联系本人=v=</p>
+<p>
+			<script>
+				console.error("Error: [hexo-tag-aplayer] Specified asset file not found (&quot;<a)");
+			</script></p>
+<p>文章共分成4大块构成</p>
+<ul>
+<li><a href="#bb1">前言</a></li>
+<li><a href="#bb2">前期准备工作</a></li>
+<li><a href="#bb3">网页配置</a></li>
+<li><a href="#bb4">个性化域名设置</a></li>
+
+</ul>
+<h3 id='div-id-bb1前言div'><div id= bb1>前言</div></h3>
+<p>	这个博客之前是直接托管给<strong>Github pages</strong>进行架设的，Github的速度大家都懂的，没有撑杆简直可以说是龟速，而我又给这个博客放置了太多<span class="heimu" title="—————你知道的太多了"><strong><del>二次元</del></strong></span>图片，导致本就不快的网页加载的更加慢了QAQ</p>
+<p>(PS:原先打算是使用<strong>Gitee pages</strong>托管，但是不知道为什么现在Gitee pages暂停了服务)</p>
+<p><a data-fancybox="gallery" href="1.png"><img src="1.png" referrerpolicy="no-referrer" alt="1"></a></p>
+<p>经过检索，决定使用<strong>Coding</strong>的静态网页托管服务，Coding的节点在中国香港，比起Github的荷兰节点肯定是快上不少。于是折腾了一个上午，把博客的架设全面迁移到了Coding上。</p>
+<p>Github和Coding的构建方式其实大同小异，不过要留意的是，Coding虽然是免费的,但他所使用的CDN加速服务是腾讯云的，这一点很蛋疼，我才刚构建不到2个小时给我扣了0.04元(钱虽然少，但积少成多就不可忽视了)而Github的服务则就是完全免费开源的了，大家按需选择</p>
+<h3 id='div-id-bb2前期准备工作div'><div id= bb2>前期准备工作</div></h3>
+<ol start='' >
+<li>安装Git</li>
+<li>安装Node.js</li>
+<li>注册<a target="_blank" rel="noopener" href='https://www.baidu.com/s?wd=%E5%A6%82%E4%BD%95%E6%B3%A8%E5%86%8Ccoding&amp;rsv_spt=1&amp;rsv_iqid=0xcbfd65b1001f0a24&amp;issp=1&amp;f=8&amp;rsv_bp=1&amp;rsv_idx=2&amp;ie=utf-8&amp;rqlang=cn&amp;tn=80035161_1_dg&amp;rsv_enter=1&amp;rsv_dl=tb&amp;rsv_btype=t&amp;inputT=721&amp;rsv_t=e34fOVbieZJGXEyvljJKErooeYVXrpJPGcYpQOnRAPsI4n2e2KIeHCHz1016O5pr%2FzIJZQ&amp;oq=%25E5%25A6%2582%25E4%25BD%2595%25E6%25B3%25A8%25E5%2586%258Cgithub&amp;rsv_pq=ec306dce000a5b37&amp;rsv_sug3=112&amp;rsv_sug1=84&amp;rsv_sug7=100&amp;rsv_sug2=0&amp;rsv_sug4=1116'>Coding</a>/<a target="_blank" rel="noopener" href='https://www.baidu.com/s?wd=%E5%A6%82%E4%BD%95%E6%B3%A8%E5%86%8Cgithub&amp;rsv_spt=1&amp;rsv_iqid=0xcbfd65b1001f0a24&amp;issp=1&amp;f=8&amp;rsv_bp=1&amp;rsv_idx=2&amp;ie=utf-8&amp;rqlang=cn&amp;tn=80035161_1_dg&amp;rsv_enter=1&amp;rsv_dl=tb&amp;rsv_btype=t&amp;inputT=1794&amp;rsv_t=d182QqHF8qoLFS1WzXGR6uOWxyJBr3Orwsy%2FCSv%2BbzeFKaklXJUQHkDo0E5DdUDScO7hEg&amp;oq=%25E5%25A6%2582%25E4%25BD%2595%25E6%25B3%25A8%25E5%2586%258Cgithub%2520coding&amp;rsv_pq=f6af8849000ab1fa&amp;rsv_sug3=105&amp;rsv_sug1=77&amp;rsv_sug7=100&amp;rsv_sug2=0&amp;rsv_sug4=2282'>Github账号</a></li>
+<li>获取ssh公钥</li>
+<li>安装Hexo</li>
+
+</ol>
+<p>查阅<font color=#46DDFF><strong>Hexo</strong></font>官方文档进行1-2步的配置 </p>
+<p><a target="_blank" rel="noopener" href='https://hexo.io/zh-cn/docs/'>文档 | Hexo</a></p>
+<h3 id='如何获取ssh公钥'>如何获取ssh公钥</h3>
+<p>对着文件夹空白处右键，选择 <strong>Git Bash Here</strong> 打开git界面</p>
+<p><a data-fancybox="gallery" href="2.png"><img src="2.png" referrerpolicy="no-referrer" alt="2"></a></p>
+<p>紧接着，先配置<font color =#A11E00><strong>用户名</strong></font>,然后在配置自己的<font color =#A11E00><strong>邮箱</strong></font></p>
+<p>(PS:如果你想要双线部署的话Coding和Github的邮箱以及用户名都设置一样会方便很多，但是密钥是可以多个生成的，按需选择吧~)</p>
+<pre><code class="language-java">git config --global user.name "xxx"(注册网站的用户名)
+git config --global user.email "xxx@xx.com"(注册网站的邮箱,别忘记了双引号哦)</code></pre>
+<p><a data-fancybox="gallery" href="3.png"><img src="3.png" referrerpolicy="no-referrer" alt="3"></a></p>
+<p>然后继续，在git界面键入</p>
+<pre><code class="language-java">ssh-keygen -t rsa -C xxx@xx.com</code></pre>
+<p>过后他会弹出几个询问是否设置密码的提示，为了避免麻烦，建议不用设置，直接回车。</p>
+<p><a data-fancybox="gallery" href="4.png"><img src="4.png" referrerpolicy="no-referrer" alt="4"></a></p>
+<p>这样就算建立成功了</p>
+<p>你可以在刚才的文件夹中发现两个新的文件</p>
+<p><a data-fancybox="gallery" href="5.png"><img src="5.png" referrerpolicy="no-referrer" alt="5"></a></p>
+<p>然后打开到你刚注册好的网站的页面(英文的那个是<strong>Github</strong>,中文的是<strong>Coding</strong>)</p>
+<p><a data-fancybox="gallery" href="6.png"><img src="6.png" referrerpolicy="no-referrer" alt="6"></a> <a data-fancybox="gallery" href="7.png"><img src="7.png" referrerpolicy="no-referrer" alt="7"></a></p>
+<p>找到SSH公钥设置&gt;新增公钥</p>
+<p>右键，用笔记本来打开<strong>id_rsa.pub</strong>文件，并且将里面的内容从头到脚复制一遍，黏贴到网页中的公钥内容中，标题随便设置，<strong>Coding</strong>记得勾选永久有效，然后点击确定</p>
+<p>完成后回到 git界面，输入</p>
+<pre><code class="language-java"> ssh -T git@github.com 或者  ssh -T git@coding.net </code></pre>
+<p>来测试SSH连接</p>
+<p><a data-fancybox="gallery" href="8.png"><img src="8.png" referrerpolicy="no-referrer" alt="8"></a></p>
+<p>询问是否连接，输入yes</p>
+<p>重新键入测试</p>
+<p><a data-fancybox="gallery" href="9.png"><img src="9.png" referrerpolicy="no-referrer" alt="9"></a></p>
+<p>如图，即为正确连接</p>
+<h3 id='安装hexo'>安装Hexo</h3>
+<p>右键电脑桌面计算机&gt;属性&gt;高级系统属性&gt;环境变量</p>
+<p><a data-fancybox="gallery" href="10.png"><img src="10.png" referrerpolicy="no-referrer" alt="10"></a></p>
+<p>选中Path，打开编辑</p>
+<p>将node.js、npm、git都加入进环境变量中</p>
+<p><a data-fancybox="gallery" href="11.png"><img src="11.png" referrerpolicy="no-referrer" alt="11"></a></p>
+<p>（PS:如果不清楚怎么找到它们的地址，请活用百度等搜索引擎上网查询）</p>
+<p>依旧是打开我们熟悉的git</p>
+<pre><code class="language-java">cnpm install -g hexo-cli</code></pre>
+<p>或者</p>
+<pre><code class="language-java">yarn add -g hexo-cli</code></pre>
+<p>出现报错的情况，请查看我上一篇文章<a href='https://liangzt.top/2021/07/29/%E5%85%B3%E4%BA%8EGal%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97-0/'>《关于Gal主题的一些使用心得》</a>有写Cnpm和Yarn的下载方式</p>
+<p>安装结束后，找到一个合适的文件夹，用作你的博客根目录</p>
+<p>在空白处右击鼠标，打开Git界面</p>
+<p>键入 <pre><code class="language-java">hexo init</code></pre></p>
+<p>我的根目录就是在一个名为blog的文件夹中</p>
+<p><a data-fancybox="gallery" href="12.png"><img src="12.png" referrerpolicy="no-referrer" alt="12"></a></p>
+<p>完毕后直接</p>
+ <pre><code class="language-java">hexo g&nbsp; (或者输入hexo generate)</code></pre>
+<pre><code class="language-java">hexo s&nbsp; (或者输入hexo server)</code></pre>
+<p><a data-fancybox="gallery" href="13.png"><img src="13.png" referrerpolicy="no-referrer" alt="13"></a></p>
+<p>出现如图指令即为成功建立本地端网站，你可以打开 <a href='http://localhost:4000' target='_blank' class='url'>http://localhost:4000</a>  来浏览它</p>
+<h3 id='div-id-bb3网页配置div'><div id= bb3>网页配置</div></h3>
+<p><strong>Github</strong>首先我们要新建一个仓库，仓库名必须是你的 <strong>用户名</strong>.github.io 格式如图</p>
+<p><a data-fancybox="gallery" href="14.png"><img src="14.png" referrerpolicy="no-referrer" alt="14"></a></p>
+<p>我这里报错是因为已经建立过了</p>
+<p><strong>Coding</strong>这边一样，不过只需要仓库名称是用户名就好了，两个网站都一样勾选生成README文件</p>
+<p>其中Coding要记得勾选公开仓库，要不然别人是进不了你的网页的</p>
+<p><a data-fancybox="gallery" href="15.png"><img src="15.png" referrerpolicy="no-referrer" alt="15"></a></p>
+<p>创建仓库完毕后，将你仓库的ssh链接<strong>Clone</strong>一下</p>
+<p><a data-fancybox="gallery" href="16.png"><img src="16.png" referrerpolicy="no-referrer" alt="16"></a></p>
+<p><a data-fancybox="gallery" href="17.png"><img src="17.png" referrerpolicy="no-referrer" alt="17"></a></p>
+<p>然后打开博客根目录的_config.yml文件，直接拉到最下面</p>
+<p><a data-fancybox="gallery" href="18.png"><img src="18.png" referrerpolicy="no-referrer" alt="18"></a></p>
+<p>如图修改</p>
+<pre><code class="language-java">deploy:
+  type: git
+  repo: 这里复制黏贴上你刚才Clone下来的链接
+  branch: main 这里的main还是master取决于你仓库的根目录叫什么，一般来说Github的是main而Coding的就是master</code></pre>
+<p><strong><u>注意一下冒号后面有一个空格，请别忘记输入</u></strong></p>
+<p>修改完后我们还可以根据Hexo官网的<a target="_blank" rel="noopener" href='https://hexo.io/zh-cn/docs/configuration'>配置手册</a>进行对照配置_config.yml文件</p>
+<p><a data-fancybox="gallery" href="19.png"><img src="19.png" referrerpolicy="no-referrer" alt="19"></a></p>
+<p>如图，这是我自己的配置</p>
+<p>准备完成后，对着你的根目录，也就是_config.yml所在的文件夹右键打开git</p>
+<p>依次输入</p>
+<pre><code class="language-java">hexo clean</code></pre>
+<pre><code class="language-java">hexo g</code></pre>
+<pre><code class="language-java">hexo d</code></pre>
+<p><a data-fancybox="gallery" href="20.png"><img src="20.png" referrerpolicy="no-referrer" alt="20"></a></p>
+<p><font color =red><strong>（注意：每次修改根目录的文件后都需要重新进行以上3个步骤(比如发布文章之类的) </strong></font></p>
+<p><font color =red><strong>##Coding除了要重新上传到库之后还要手动到网页托管界面重新部署，这一点也比较麻烦）</strong></font></p>
+<p>一般的，如果你运行完以上代码后，出现和我差不多一样的界面，恭喜你，你成功的架设了属于自己的博客(此处仅限<strong>Github</strong>用户)可以通过 xxxx（你的用户名）.github.io 进入你的博客查看</p>
+<p><strong>Coding</strong>用户不要着急，你们还有几个步骤呢</p>
+<p>让我们回到浏览器，找到网页托管选项</p>
+<p><a data-fancybox="gallery" href="21.png"><img src="21.png" referrerpolicy="no-referrer" alt="21"></a></p>
+<p>这里建议跟着官方的流程走一遍，因为这一块我以前用腾讯云的时候已经注册过一次了</p>
+<p><a target="_blank" rel="noopener" href='https://help.coding.net/docs/pages/intro.html'>网站托管服务 - CODING 帮助中心</a></p>
+<p>成功进入配置后，按照我的格式来进行网页配置</p>
+<p><a data-fancybox="gallery" href="22.png"><img src="22.png" referrerpolicy="no-referrer" alt="22"></a></p>
+<p>注意这里网站类型要选择<strong>静态网站</strong>，选择<strong>Hexo</strong>会报错</p>
+<p>然后确定后开始创建即可，网站建立完成后，右上角可以选择进入访问，上面的链接你可以直接复制黏贴出去。</p>
+<h3 id='div-id-bb4个性化域名设置div'><div id= bb4>个性化域名设置</div></h3>
+<p>首先你需要拥有一个自己的域名，这里我只推荐通过<strong>阿里云万网</strong>购买，因为我只在这里试过，如果你自己有其他更好的选择，按需即可</p>
+<p>关于域名购买的方法，网上有很多全面的教程，这里就不细说了</p>
+<p>回到博客根目录下\source，新建一个CNAME文件(<strong>无后缀</strong>注意)使用笔记本打开他，在里面输入你自己的域名，比如我就输入 liangzt.top ，前面不用加任何的东西。然后保存即可</p>
+<p><a data-fancybox="gallery" href="24.png"><img src="24.png" referrerpolicy="no-referrer" alt="24"></a></p>
+<p>然后重新 <strong>clean g s</strong>老三样一下</p>
+<p><a data-fancybox="gallery" href="23.png"><img src="23.png" referrerpolicy="no-referrer" alt="23"></a></p>
+<p>这个时候，进入你的阿里云域名管理系统，点击解析</p>
+<p>添加记录</p>
+<p><a data-fancybox="gallery" href="25.png"><img src="25.png" referrerpolicy="no-referrer" alt="25"></a></p>
+<p>照着我这个格式设置就好了，记录值就是你刚才拿到的(xxx.github.io)，一个主机记录是www的一个是@的</p>
+<p>如果你的主机记录选择 www ，就可以通过 <a href='http://www.liangzt.top' target='_blank' class='url'>www.liangzt.top</a> 进行网站访问了，如果只想输入 liangzt.top 来访问网站，那只需要选择@做主机记录即可，我这里两个都进行了设置。
+Coding用户，直接在网页托管界面有一个自定义域名，把自己域名填进去就可以了，记得把强制https给勾选上。</p>
+<h5 id='github用户开启强制https的方法'><strong>Github用户开启强制https的方法</strong></h5>
+<p><a data-fancybox="gallery" href="26.png"><img src="26.png" referrerpolicy="no-referrer" alt="26"></a></p>
+<p>打开仓库设置，找到pages，将最下面的选项给勾选上（一般来说颁发SSL大概要24小时，所以这个时间段应该还勾选不了，明天记得勾选就好了）</p>
+<h2 id='总结'>总结</h2>
+<p>因为这个教程大多数是靠我自己看别人的教程琢磨出来的，可能有些地方讲的不太清楚请多见谅，可以去搜索别的Hexo建站教程补充一下，我写这个 一是为了记录下自己建站的一个经历，二就是因为实在没想好要更新什么文章，索性直接把自己这3天的踩过的一些坑排除掉写一份相对比较简单易懂的建站教学，从头到尾甚至不需要你懂代码就可以完成。</p>
+<p>希望这个教程能够帮助有需要的人，也希望自己能保持更新博客的好习惯，时刻分析自己所做的以及应该去做的事情，明确目标。</p>
+<h1 id='最后excelsior'>最后,<font color=#39c5bb><strong>Excelsior</strong>!</font></h1>
+<p><a data-fancybox="gallery" href="27.gif"><img src="27.gif" referrerpolicy="no-referrer" alt="27"></a></p>
+<center><span class="heimu" title="—————你知道的太多了">宫子真可爱嘻嘻</span></center>
+</body>
+</html>
         </div>
-        <img width="150" height="150" src="https://api.amogu.cn/api/acg?=6"
-          class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
-      </a>
-    </div>
-    <h1 class="entry-title">
-      <a href="/2021/12/09/Alexa-%E5%BF%AB%E9%80%9F%E6%8E%A5%E5%85%A5-Esp8266-SinricPro/">
-        Alexa 快速接入 Esp8266 SinricPro</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-      2021-12-9</div>
-    <p>
-      </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2021/12/09/Alexa-%E5%BF%AB%E9%80%9F%E6%8E%A5%E5%85%A5-Esp8266-SinricPro/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-       
-    
-      <!-- 其余文章 -->
-      
-        <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2021/11/30/Python-Mongodb-Esp8266-%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%AE%80%E6%98%93%E6%B8%A9%E6%B9%BF%E5%BA%A6%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://api.amogu.cn/api/acg?=5"
-          class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
-      </a>
-    </div>
-    <h1 class="entry-title">
-      <a href="/2021/11/30/Python-Mongodb-Esp8266-%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%AE%80%E6%98%93%E6%B8%A9%E6%B9%BF%E5%BA%A6%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA/">
-        Python+Mongodb+Esp8266+小程序的简易温湿度数据展示</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-      2021-11-30</div>
-    <p>
-      </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2021/11/30/Python-Mongodb-Esp8266-%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%AE%80%E6%98%93%E6%B8%A9%E6%B9%BF%E5%BA%A6%E6%95%B0%E6%8D%AE%E5%B1%95%E7%A4%BA/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-       
-    
-      <!-- 其余文章 -->
-      
-        <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://api.amogu.cn/api/acg?=3"
-          class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
-      </a>
-    </div>
-    <h1 class="entry-title">
-      <a href="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/">
-        简单配置使用天猫精灵控制你的ESP8266</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-      2021-9-14</div>
-    <p>
-      简单上手天猫精灵实例</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2021/09/14/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-       
-    
 
 
+        <!-- 评分 -->
+        <div class="single-reward">
+          
+        </div>
+        <!-- 自定义署名方式 -->
+        <footer class="post-footer">
+          <div class="post-lincenses" style="color: #66e0ff;">
+            欢迎转载，转载时请注明来源哦！
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" style="color: #66e0ff;" target="_blank"
+              rel="nofollow">
+              <i class="fa fa-creative-commons" aria-hidden="true"></i>ncsa4.0</a>
+          </div>
+          
+          <div class="post-tags" style="color: #919aa3">
+            <span><i class="fa fa-tags"></i>
+              
+            </span>
+            <span>
+              <i class="iconfont icon-file"></i>
+              
+            </span>
+          </div>
+          
+          <div class="post-share" >
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+        <!-- <div class="tag-cloud">
+          <div class="tag-cloud-title">
+          </div>
+          <div class="tag-cloud-tags">
+            <a href="/tags/Hexo/" style="font-size: 10px; color: #f06966">Hexo</a> <a href="/tags/web/" style="font-size: 15px; color: #9592a7">web</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%8A%80%E6%9C%AF/" style="font-size: 10px; color: #f06966">博客技术</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/" style="font-size: 15px; color: #9592a7">博客相关</a> <a href="/tags/%E6%B4%8B%E8%B4%A7/" style="font-size: 10px; color: #f06966">洋货</a> <a href="/tags/%E7%89%A9%E8%81%94%E7%BD%91/" style="font-size: 20px; color: #39bae8">物联网</a>
+          </div>
+        </div> -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+        <div class="post-nepre half previous">
+          
+            <a href="/2021/12/21/%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5%E6%8E%A7%E5%88%B6%E4%BD%A0%E7%9A%84ESP8266/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="/img/stripe-loader.svg" data-src=""
+                  style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)"
+                  src="">
+              </div>
+              <span class="label">Previous Post</span>
+              <div class="info">
+                <h3></h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+          
+          
+          
+          <div class="post-nepre half next">
+            
+              <a href="/2021/12/20/%E5%85%B3%E4%BA%8EGal%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97-0/" rel="next">
+                <div class="background">
+                  <img class="lazyload" src="/img/stripe-loader.svg" data-src=""
+                    style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                    onerror="imgError(this,3)" src="">
+                </div>
+                <span class="label">Next Post</span>
+                <div class="info">
+                  <h3></h3>
+                  <hr>
+                </div>
+              </a>
+            </div>
+            
+      </section>
+      <!-- 加密文章隐藏评论 -->
+      <section class="comment" >
+        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<div id="gitalk-container" class="comment"></div> 
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="/js/md5.min.js"></script>
+<script type="text/javascript">
+	var gitalk = new Gitalk({
+  	clientID: '6c7a21ccc38aac877ba4',
+  	clientSecret: 'c05dc3231f6525f17a1b984be8ce6798de3913a6',
+  	repo: 'BbEezier.github.io',
+  	owner: 'BbEezier',
+	admin: ['BbEezier'],
+	distractionFreeMode: 'true',
+    id: md5(location.pathname)
+})
+gitalk.render('gitalk-container') 
+</script>
 
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+      </section>
+      <!-- 加密文章隐藏作者信息 -->
+      
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
+<!--评论配置-->
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<div id="gitalk-container" class="comment"></div> 
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="/js/md5.min.js"></script>
+<script type="text/javascript">
+	var gitalk = new Gitalk({
+  	clientID: '6c7a21ccc38aac877ba4',
+  	clientSecret: 'c05dc3231f6525f17a1b984be8ce6798de3913a6',
+  	repo: 'BbEezier.github.io',
+  	owner: 'BbEezier',
+	admin: ['BbEezier'],
+	distractionFreeMode: 'true',
+    id: md5(location.pathname)
+})
+gitalk.render('gitalk-container') 
+</script>
+
+
       <!-- body.end -->
     </div>
     <!-- search -->    
